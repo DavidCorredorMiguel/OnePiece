@@ -14,10 +14,10 @@ if (isset($_POST["tp"])) { $v = $m->getPortada(); } if (isset($_POST["m"])) { $v
 if (isset($_POST["ar"])) { $v = $m->getArco(); } if (isset($_POST["sa"])) { $v = $m->getSaga(); }
 foreach ($m->c1() as $c1) foreach ($m->c2() as $c2) foreach ($m->c3() as $c3) foreach ($m->c4() as $c4) foreach ($m->c5() as $c5)
 foreach ($m->c6() as $c6) foreach ($m->c7() as $c7) foreach ($m->c8() as $c8) foreach ($m->c9() as $c9) foreach ($m->c10() as $c10)
-foreach ($m->c11() as $c11) { $t = $c2 + $c3 + $c4 + $c5 + $c6 + $c7 + $c8 + $c9 + $c10 + $c11;
+foreach ($m->c11() as $c11) foreach ($m->c12() as $c12) { $t = $c2 + $c3 + $c4 + $c5 + $c6 + $c7 + $c8 + $c9 + $c10 + $c11 + $c12;
     echo "Capitulos Con Minihistoria: $c1 | Saga Del East Blue: $c2 | Saga De Arabasta: $c3 | Saga De La Isla Del Cielo: $c4 |
         Saga De Water 7: $c5 | Saga De Thriller Bark: $c6<hr>Capitulos Saga Guerra En La Cumbre: $c7 | Saga Isla De Los Hombres Pez:
-        $c8 | Saga De Dressrosa: $c9 | Saga De Los Cuatro Emperadores: $c10 | Saga Final: $c11 | Capitulos: $t<hr>";
+        $c8 | Saga De Dressrosa: $c9 | Saga Whole Cake Island: $c10 | Saga Pais De Wano: $c11 | Saga Final: $c12 | Capitulos: $t<hr>";
 } echo "<form action='OP28.php' method='post'><select name='volv'>";
 foreach ($m->sacaVol() as $vol) { echo "<option value='$vol'>$vol</option>"; }
 echo "</select><input type='submit' value='Buscar Volumen' name='vol'><select name='npagv'>";

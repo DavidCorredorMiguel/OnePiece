@@ -15,11 +15,11 @@ if (isset($_POST["sa"])) { $v = $m->getSaga(); } if (isset($_POST["b1"])) { $v =
 if (isset($_POST["b2"])) { $v = $m->getEpisodiosNoCanon(); }
 foreach ($m->c1() as $c1) foreach ($m->c2() as $c2) foreach ($m->c3() as $c3) foreach ($m->c4() as $c4) foreach ($m->c5() as $c5)
 foreach ($m->c6() as $c6) foreach ($m->c7() as $c7) foreach ($m->c8() as $c8) foreach ($m->c9() as $c9) foreach ($m->c10() as $c10)
-foreach ($m->c11() as $c11) foreach ($m->c12() as $c12) {
+foreach ($m->c11() as $c11) foreach ($m->c12() as $c12) foreach ($m->c13() as $c13) {
     echo "Episodios Saga Del East Blue: $c1 | Saga De Arabasta: $c2 | Saga De La Isla Del Cielo: $c3 | Saga De Water 7: $c4 |
         Saga De Thriller Bark: $c5 | Saga De La Guerra En La Cumbre: $c6<hr>Episodios Saga De La Isla De Los Hombres Pez: $c7 |
-        Saga De Dressrosa: $c8 | Saga Cuatro Emperadores: $c9 | Saga Final: $c10 | Episodios Canon: $c11 | No Canon: $c12 |
-        Episodios: ". ($c11+$c12) ."<hr>";
+        Saga De Dressrosa: $c8 | Saga Whole Cake Island: $c9| Saga Pais De Wano: $c10 | Saga Final: $c11 | Episodios Canon: $c12 | 
+        No Canon: $c13 | Episodios: ". ($c12+$c13) ."<hr>";
 } echo "<form action='OP31.php' method='post'><select name='tempv'>";
 foreach ($m->sacaTemporada() as $temporada) { echo "<option value='$temporada'>" . $temporada . "ª</option>"; }
 echo "</select><input type='submit' value='Buscar Temporada' name='temp'><select name='openingv'>";

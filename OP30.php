@@ -12,8 +12,8 @@ if (!isset($_GET["pag"])) { $pag = 1; } else { $pag = $_GET["pag"]; } $resultado
 $res->prepare("select count(*) as 'total' from capitulos"); $res->execute(); $res->bind_result($total);
 $fila = $res->fetch(); $numpag = ceil($total / $resultadopag); $pagactual = ($pag - 1) * $resultadopag;
 $res->prepare("select * from capitulos LIMIT " . $pagactual . ", " . $resultadopag); $res->execute();
-$res->bind_result($idcap, $sagaprincipal, $vol, $forigvol, $fvol, $vopag, $vpag, $fcap, $npag, $nombrevolumen, $nombrecapitulo,
-$tipoportada, $c, $minihistoria, $nombreportada, $arco, $saga);
+$res->bind_result($idcap, $vol, $forigvol, $fvol, $vopag, $vpag, $fcap, $npag, $nombrevolumen, $nombrecapitulo, $tipoportada, $c, 
+$minihistoria, $nombreportada, $arco, $saga);
 echo "<table><tr><th>Saga Principal y Volumen</th><th>Capitulo</th><th>Arco y Saga</th></tr>";
 while ($res->fetch()) { echo "<tr><td bgcolor='lightgreen'>Mar ";
     if ($idcap <= 597) { echo "De La Supervivencia: Saga De Los Supernovas"; } else { echo "Final: Saga Del Nuevo Mundo"; }
